@@ -18,7 +18,7 @@ def send_success_message():
   sg = sendgrid.SendGridAPIClient(api_key=os.getenv('SENDGRID_API_KEY'))
 
   subject = f'The period of your {username} pythonanywhere website was renewed'
-  body = 'Your website will be running for more 3 months from now'
+  body = 'Your website will be running for more 3 months from now!'
 
   send_message(sg, subject, body)
 
