@@ -1,5 +1,7 @@
 import os
 
+# Login into pythonanywhere using the username and password.
+
 
 def login(csrftoken_html, session):
   print('[2/5] Logging in')
@@ -15,5 +17,5 @@ def login(csrftoken_html, session):
       f'&auth-password={password}' \
       f'&login_view-current_step=auth'
 
-  response = session.post('https://www.pythonanywhere.com/login/',
-                          headers=headers, data=data)
+  session.post('https://www.pythonanywhere.com/login/',
+               headers=headers, data=data)

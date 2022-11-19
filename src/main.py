@@ -7,6 +7,9 @@ from .move_to_web import move_to_web
 from .renew_period import renew_period
 from .send_email_sendgrid import send_error_message, send_success_message
 
+# Execute the logic for the renewal for [TRIES] times. If it succedes,
+# send an email with a success message, otherwise send an error message.
+
 
 def execute():
   TRIES = 3

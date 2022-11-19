@@ -1,5 +1,7 @@
 import os
 
+# Renew the period the website will be running for more 3 months.
+
 
 def renew_period(csrftoken_html, session):
   print('[4/5] Renew period up to 3 months')

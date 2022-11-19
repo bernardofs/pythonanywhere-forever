@@ -1,6 +1,9 @@
 import re
 from bs4 import BeautifulSoup
 
+# Get CSRF token and store cookies in session which will be
+# necessary to make the following requests.
+
 
 def get_csrftoken(html):
   str = next(BeautifulSoup(html, features="html.parser").find(

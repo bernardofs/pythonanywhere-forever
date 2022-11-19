@@ -1,6 +1,8 @@
 import os
 from .get_session_data import get_csrftoken
 
+# Navigate to the web tab after logging in.
+
 
 def move_to_web(session):
   print('[3/5] Move to \"web\" page')
