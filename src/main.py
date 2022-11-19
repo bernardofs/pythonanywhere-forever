@@ -9,7 +9,7 @@ from .send_email_sendgrid import send_error_message, send_success_message
 
 
 def execute():
-  TRIES = 1
+  TRIES = 3
 
   for tries in range(1, TRIES + 1):
     print(f'Attempt {tries}')
