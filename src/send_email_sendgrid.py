@@ -5,7 +5,7 @@ from sendgrid.helpers.mail import *
 
 def gen_success_message():
   subject = 'The pythonanywhere period was renewed'
-  body = 'The website will be alive for at least 3 months'
+  body = 'The website will be alive for more 3 months'
   return subject, body
 
 
