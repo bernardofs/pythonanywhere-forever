@@ -19,7 +19,7 @@ def renew_period(csrftoken_html, session):
       headers=headers, data=data
   )
 
-  if response.status_code == 200:
+  if response.status_code == 200 or response.url != f'https://www.pythonanywhere.com/user/{username}/webapps/':
     print('Success!')
   else:
-    raise Exception('Error: Status code different from 200')
+    raise Exception('Error while trying to renew the period.')

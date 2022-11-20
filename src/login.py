@@ -17,5 +17,10 @@ def login(csrftoken_html, session):
       f'&auth-password={password}' \
       f'&login_view-current_step=auth'
 
-  session.post('https://www.pythonanywhere.com/login/',
-               headers=headers, data=data)
+  response = session.post('https://www.pythonanywhere.com/login/',
+                          headers=headers, data=data)
+
+  if response.url != f'https://www.pythonanywhere.com/user/{username}/':
+    raise Exception(
+      'The program couldn\'t login. Please check the username and password.'
+    )
