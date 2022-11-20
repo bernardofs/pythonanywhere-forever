@@ -5,6 +5,7 @@ from .get_session_data import get_session_data
 from .login import login
 from .move_to_web import move_to_web
 from .renew_period import renew_period
+# comment the line below to disable email integration
 from .send_email_sendgrid import send_error_message, send_success_message
 
 # Execute the logic for the renewal for [TRIES] times. If it succedes,
@@ -26,6 +27,7 @@ def execute():
 
       csrftoken_html = move_to_web(session)
 
+      # comment the line below to disable email integration
       renew_period(csrftoken_html, session)
 
       send_success_message()
