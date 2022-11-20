@@ -4,7 +4,9 @@ Renews the 3 months free period of a pythonanywhere account automatically. It do
 
 ## Behavior
 
-The app simulates the following user flow:
+The app simulates the following flow:
+
+https://user-images.githubusercontent.com/26277944/202918914-c7e5accc-f721-488c-bf4d-5b5a81bee945.mp4
 
 This bot was created to work on the AWS cloud periodically. It will be provided steps in the next section explaining how to do that. However, this can be adapted to work on other platforms.
 
