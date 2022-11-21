@@ -44,7 +44,7 @@ jobs:
           docker push $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG
           echo ::set-output name=exit_code::$?
 
-      - name: Delete untagged images
+      - name: Delete untagged images public
         if: steps.build-ecr-public.outputs.exit_code == 0
         env:
           REPOSITORY: pythonanywhere-forever
@@ -85,7 +85,7 @@ jobs:
           aws lambda update-function-code --function-name $FUNCTION_ARN_NAME --image-uri $IMAGE_URI
           echo ::set-output name=exit_code::$?
 
-      - name: Delete untagged images
+      - name: Delete untagged images private
         if: steps.update-lambda-function-code.exit_code == 0
         env:
           REPOSITORY: ${{ secrets.REPOSITORY }}
