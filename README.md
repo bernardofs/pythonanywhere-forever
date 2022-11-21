@@ -69,7 +69,7 @@ Email integration (Optional): After the execution of the program, an email is se
 
   - Login to Amazon ECR Public
   - Build, tag, and push docker image to Amazon ECR Public
-  - Delete untagged images
+  - Delete untagged images public
 
 - After doing all the previous steps, if anything is pushed to the repository, the GitHub Actions will execute the following steps:
   - Build and push the Docker Image in the ECR repository.
